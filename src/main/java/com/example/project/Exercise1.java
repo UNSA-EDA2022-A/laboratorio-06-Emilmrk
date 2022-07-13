@@ -26,7 +26,7 @@ public class Exercise1 {
     		return true;
     	}else {
     		if (value(a1.root)==value(a2.root)) {
-				return value(a1.root)==value(a2.root);
+				return value(a1.root.right)==value(a2.root.right)&&value(a1.root.left)==value(a2.root.left);
 			}else {
 				return false;
 			}
