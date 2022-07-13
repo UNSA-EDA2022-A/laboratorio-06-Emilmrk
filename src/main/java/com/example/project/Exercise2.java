@@ -20,25 +20,22 @@ public class Exercise2 {
     }
 
 
-    public <T extends Comparable<T>> boolean bstEstrictamenteBinario(BST<T> a){
-    	if (a.isEmpty()) {
-			return false;
+    public <T extends Comparable<T>> boolean bstIguales(BST<T> a1, BST<T> a2){
+    	if (a1.isEmpty()&&a2.isEmpty()) {
+			return true;
 		}else {
-			return binario(a.root);
+			
 		}
+        return false;
     }
     
-    public <T extends Comparable<T>>Boolean binario(Node<T> a) {
-
-    	if (value(a.left)==value(a.right)) {
-			return binario(a.left)&&binario(a.right);
+    public <T extends Comparable<T>>Boolean NodesIguales(Node<T> a1, Node<T> a2) {
+    	
+    	if(a1.data.compareTo(a1.data)==a1.data.compareTo(a2.data)) {
+			return NodesIguales(a1.left, a2.left)&&NodesIguales(a1.right, a2.right);
 		}
-		return false;
-
-    }
-    
-    public <T extends Comparable<T>> boolean value(Node<T> nodo1) {
-    	if(nodo1!=null) return true; 
+    	
     	return false;
-    }
+		
+	}
 }
